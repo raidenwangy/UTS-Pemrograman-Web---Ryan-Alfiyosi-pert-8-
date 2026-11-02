@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">B</span>
+          <span>BukuKita</span>
+        </a>
+
+        <p class="side-label">Menu Utama</p>
+
+        <nav class="side-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="stok.html">Informasi Stok</a>
+          <a class="active" href="checkout.html">Pemesanan</a>
+          <a href="tracking.html">Tracking</a>
+          <a href="laporan.html">Laporan</a>
+          <a href="riwayat.html">Riwayat Transaksi</a>
+        </nav>
+
+        <button class="logout" data-logout>↪ Keluar</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Transaksi</span>
+            <h1>Halaman Pemesanan</h1>
+            <p class="muted">Buat pesanan buku baru.</p>
+          </div>
+
+          <div class="user-chip">
+            <span class="avatar">A</span>
+            <span>Admin</span>
+          </div>
+        </header>
+
+        <div class="content-grid">
+          <section class="panel">
+            <h2>Informasi Pemesan</h2>
+
+            <form id="orderForm" class="form-stack">
+              <label>Nama pemesan</label>
+              <input name="customer" required placeholder="Nama lengkap">
+
+              <label>Email</label>
+              <input name="email" type="email" required placeholder="nama@email.com">
+
+              <label>Alamat pengiriman</label>
+              <textarea name="address" rows="3" required placeholder="Alamat lengkap"></textarea>
+
+              <label>Pilih buku</label>
+              <select name="bookId" id="orderBook" required></select>
+
+              <label>Jumlah</label>
+              <input name="qty" type="number" min="1" value="1" required>
+
+              <label>Metode pembayaran</label>
+              <select name="payment" required>
+                <option value="">Pilih pembayaran</option>
+                <option>Transfer Bank</option>
+                <option>COD</option>
+                <option>E-Wallet</option>
+              </select>
+
+              <button class="btn btn-primary" type="submit">Buat Pesanan</button>
+            </form>
+          </section>
+
+          <section class="panel">
+            <h2>Ringkasan Pemesanan</h2>
+            <p class="muted">Pesanan yang berhasil dibuat akan muncul di riwayat transaksi dan dapat dilacak.</p>
+
+            <div class="summary-box">
+              <span>Contoh nomor DO</span>
+              <strong>DO-2026-001</strong>
+              <small>Nomor Delivery Order dibuat otomatis saat pesanan disimpan.</small>
+            </div>
+
+            <a class="btn btn-outline btn-full" href="riwayat.html">Lihat Riwayat Transaksi</a>
+          </section>
+        </div>
+
+        <section class="panel">
+          <h2>Daftar Pesanan Tersimpan</h2>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>No. DO</th>
+                  <th>Pemesan</th>
+                  <th>Buku</th>
+                  <th>Jumlah</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="orderTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

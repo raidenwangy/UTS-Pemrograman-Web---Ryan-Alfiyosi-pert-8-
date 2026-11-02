@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Buku | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">B</span>
+          <span>BukuKita</span>
+        </a>
+
+        <p class="side-label">Menu Utama</p>
+
+        <nav class="side-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a class="active" href="stok.html">Informasi Stok</a>
+          <a href="checkout.html">Pemesanan</a>
+          <a href="tracking.html">Tracking</a>
+          <a href="laporan.html">Laporan</a>
+          <a href="riwayat.html">Riwayat Transaksi</a>
+        </nav>
+
+        <button class="logout" data-logout>↪ Keluar</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Katalog</span>
+            <h1>Informasi Stok Buku</h1>
+            <p class="muted">Kelola koleksi dan ketersediaan buku.</p>
+          </div>
+
+          <div class="user-chip">
+            <span class="avatar">A</span>
+            <span>Admin</span>
+          </div>
+        </header>
+
+        <section class="toolbar">
+          <input id="searchBook" class="search-input" placeholder="Cari judul atau penulis...">
+          <button class="btn btn-primary" id="openBookForm">＋ Tambah Buku</button>
+        </section>
+
+        <section class="panel">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Gambar</th>
+                  <th>ID</th>
+                  <th>Judul Buku</th>
+                  <th>Penulis</th>
+                  <th>Kategori</th>
+                  <th>Harga</th>
+                  <th>Stok</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="bookTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="modal" id="bookModal" aria-hidden="true">
+          <div class="modal-box">
+            <button class="modal-close" data-close aria-label="Tutup">&times;</button>
+            <h2>Tambah Stok Buku</h2>
+
+            <form id="bookForm" class="form-stack">
+              <label>Judul buku</label>
+              <input name="title" required>
+
+              <label>Penulis</label>
+              <input name="author" required>
+
+              <label>Kategori</label>
+              <input name="category" required>
+
+              <label>Harga (Rp)</label>
+              <input name="price" type="number" min="1" required>
+
+              <label>Jumlah stok</label>
+              <input name="stock" type="number" min="0" required>
+
+              <button class="btn btn-primary" type="submit">Simpan Buku</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

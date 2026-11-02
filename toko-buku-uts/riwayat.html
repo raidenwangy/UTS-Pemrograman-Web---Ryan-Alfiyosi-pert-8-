@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">B</span>
+          <span>BukuKita</span>
+        </a>
+
+        <p class="side-label">Menu Utama</p>
+
+        <nav class="side-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="stok.html">Informasi Stok</a>
+          <a href="checkout.html">Pemesanan</a>
+          <a href="tracking.html">Tracking</a>
+          <a href="laporan.html">Laporan</a>
+          <a class="active" href="riwayat.html">Riwayat Transaksi</a>
+        </nav>
+
+        <button class="logout" data-logout>↪ Keluar</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Arsip</span>
+            <h1>Riwayat Transaksi</h1>
+            <p class="muted">Daftar transaksi yang pernah dibuat.</p>
+          </div>
+
+          <div class="user-chip">
+            <span class="avatar">A</span>
+            <span>Admin</span>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>No. DO</th>
+                  <th>Pemesan</th>
+                  <th>Buku</th>
+                  <th>Tanggal</th>
+                  <th>Pembayaran</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="historyTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

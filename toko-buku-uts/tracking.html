@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">B</span>
+          <span>BukuKita</span>
+        </a>
+
+        <p class="side-label">Menu Utama</p>
+
+        <nav class="side-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="stok.html">Informasi Stok</a>
+          <a href="checkout.html">Pemesanan</a>
+          <a class="active" href="tracking.html">Tracking</a>
+          <a href="laporan.html">Laporan</a>
+          <a href="riwayat.html">Riwayat Transaksi</a>
+        </nav>
+
+        <button class="logout" data-logout>↪ Keluar</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Pengiriman</span>
+            <h1>Tracking Pengiriman</h1>
+            <p class="muted">Masukkan nomor Delivery Order untuk melihat status.</p>
+          </div>
+
+          <div class="user-chip">
+            <span class="avatar">A</span>
+            <span>Admin</span>
+          </div>
+        </header>
+
+        <section class="panel tracking-search">
+          <form id="trackingForm" class="search-row">
+            <input id="doInput" required placeholder="Contoh: DO-2026-001">
+            <button class="btn btn-primary" type="submit">Cari</button>
+          </form>
+          <p class="muted small">Gunakan nomor DO yang tersedia pada halaman Riwayat Transaksi.</p>
+        </section>
+
+        <section id="trackingResult"></section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">B</span>
+          <span>BukuKita</span>
+        </a>
+
+        <p class="side-label">Menu Utama</p>
+
+        <nav class="side-nav">
+          <a class="active" href="dashboard.html">Dashboard</a>
+          <a href="stok.html">Informasi Stok</a>
+          <a href="checkout.html">Pemesanan</a>
+          <a href="tracking.html">Tracking</a>
+          <a href="laporan.html">Laporan</a>
+          <a href="riwayat.html">Riwayat Transaksi</a>
+        </nav>
+
+        <button class="logout" data-logout>↪ Keluar</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Overview</span>
+            <h1>Dashboard</h1>
+          </div>
+
+          <div class="user-chip">
+            <span class="avatar">A</span>
+            <span>Admin</span>
+          </div>
+        </header>
+
+        <section class="welcome-panel">
+          <div>
+            <p class="eyebrow light">BukuKita Admin</p>
+            <h2 id="greeting">Selamat datang!</h2>
+            <p>Kelola katalog, pesanan, dan pengiriman toko buku Anda dari satu tempat.</p>
+          </div>
+        </section>
+
+        <section class="stat-grid">
+          <article class="stat-card">
+            <span class="stat-icon purple">ST</span>
+            <p>Total Buku</p>
+            <strong id="statBooks">0</strong>
+            <small>Judul dalam katalog</small>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-icon orange">PS</span>
+            <p>Total Pesanan</p>
+            <strong id="statOrders">0</strong>
+            <small>Pesanan tersimpan</small>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-icon green">OK</span>
+            <p>Stok Tersedia</p>
+            <strong id="statStock">0</strong>
+            <small>Total unit buku</small>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-icon blue">KR</span>
+            <p>Dalam Pengiriman</p>
+            <strong id="statShipping">0</strong>
+            <small>Pesanan diproses</small>
+          </article>
+        </section>
+
+        <section class="section-heading">
+          <div>
+            <span class="eyebrow">Akses Cepat</span>
+            <h2>Jelajahi menu</h2>
+          </div>
+        </section>
+
+        <section class="menu-grid">
+          <a class="menu-card" href="stok.html">
+            <span class="menu-icon purple">ST</span>
+            <h3>Informasi Stok/Katalog</h3>
+            <p>Lihat dan tambahkan koleksi buku.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a class="menu-card" href="tracking.html">
+            <span class="menu-icon blue">TR</span>
+            <h3>Tracking Pengiriman</h3>
+            <p>Periksa status pengiriman pesanan.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a class="menu-card" href="laporan.html">
+            <span class="menu-icon orange">LP</span>
+            <h3>Laporan Pemesanan</h3>
+            <p>Lihat ringkasan data pemesanan.</p>
+            <span class="card-arrow">→</span>
+          </a>
+
+          <a class="menu-card" href="riwayat.html">
+            <span class="menu-icon green">RW</span>
+            <h3>History Transaksi</h3>
+            <p>Lihat seluruh transaksi yang tercatat.</p>
+            <span class="card-arrow">→</span>
+          </a>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

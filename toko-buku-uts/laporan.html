@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan | BukuKita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="dashboard.html">
+          <span class="brand-mark">B</span>
+          <span>BukuKita</span>
+        </a>
+
+        <p class="side-label">Menu Utama</p>
+
+        <nav class="side-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="stok.html">Informasi Stok</a>
+          <a href="checkout.html">Pemesanan</a>
+          <a href="tracking.html">Tracking</a>
+          <a class="active" href="laporan.html">Laporan</a>
+          <a href="riwayat.html">Riwayat Transaksi</a>
+        </nav>
+
+        <button class="logout" data-logout>↪ Keluar</button>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <span class="eyebrow">Analisis</span>
+            <h1>Laporan Pemesanan</h1>
+            <p class="muted">Ringkasan transaksi dari data lokal.</p>
+          </div>
+
+          <div class="user-chip">
+            <span class="avatar">A</span>
+            <span>Admin</span>
+          </div>
+        </header>
+
+        <section class="stat-grid">
+          <article class="stat-card">
+            <p>Total Pesanan</p>
+            <strong id="reportOrders">0</strong>
+            <small>Semua transaksi</small>
+          </article>
+
+          <article class="stat-card">
+            <p>Total Pendapatan</p>
+            <strong id="reportRevenue">Rp0</strong>
+            <small>Akumulasi nilai pesanan</small>
+          </article>
+
+          <article class="stat-card">
+            <p>Total Buku Terjual</p>
+            <strong id="reportQty">0</strong>
+            <small>Unit buku</small>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h2>Rincian Pesanan</h2>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>No. DO</th>
+                  <th>Pemesan</th>
+                  <th>Tanggal</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="reportTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
